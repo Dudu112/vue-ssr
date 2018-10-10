@@ -3,8 +3,8 @@ const path = require('path')
 const express = require('express')
 const favicon = require('serve-favicon')
 const compression = require('compression')
-const logger = require('morgan');
-const proxy = require('http-proxy-middleware')//引入代理中间件
+const logger = require('morgan')
+const proxy = require('http-proxy-middleware')
 const { createBundleRenderer  } = require('vue-server-renderer')
 const rootPath = file => path.resolve(__dirname, file)
 // const clientConfig = require('./config/webpack.client.config')

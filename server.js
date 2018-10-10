@@ -50,7 +50,7 @@ const serve = (path, cache) => express.static(rootPath(path), {
 app.use(logger('combined'))
 
 app.use(compression())
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use('/dist', serve('./dist', true))
 app.use('/public', serve('./public', true))
 
@@ -89,7 +89,7 @@ app.get('*', (req, res) => {
         }
     }
     var title = ''
-    renderer.renderToStream({ title:'大圣车服', url: req.url })
+    renderer.renderToStream({ title:'', url: req.url })
         .on('error', errorHandler)
         .on('end', () => console.log(`whole request: ${Date.now() - s}ms`))
         .pipe(res)

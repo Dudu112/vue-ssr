@@ -5,7 +5,6 @@ import createRouter from './router'
 
 import { sync } from 'vuex-router-sync'
 
-
 export function createApp () {
     // 创建 router 实例
     const router = createRouter()

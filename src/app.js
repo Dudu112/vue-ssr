@@ -1,12 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import customerMethods from './static/js/methods'
 import { createStore } from './store'
 import createRouter from './router'
 
 import { sync } from 'vuex-router-sync'
 
-Vue.use(customerMethods)
 
 export function createApp () {
     // 创建 router 实例
